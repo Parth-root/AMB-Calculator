@@ -77,8 +77,8 @@ var addItem = (day, rupee) => {
 var calcAvg = (sum, days, total_days) => {
   var remDays = total_days - days;
   var curAvg = Math.round(sum / days);
-  // 1000 is the minimum needed amount
-  var avgMinBal = Math.round((total_days * 1000 - sum) / remDays);
+  // 10000 is the minimum needed amount
+  var avgMinBal = Math.round((total_days * 10000 - sum) / remDays);
   if (avgMinBal <= -1) {
     final(curAvg, 0);
   } else {
